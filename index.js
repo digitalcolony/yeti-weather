@@ -2,10 +2,13 @@ require('dotenv').config()
 const express = require("express");
 const fs = require("fs");
 const weather = require("./weather/weather.js");
-const config = require("./config.json");
 
 var app = express();
 const port = process.env.PORT || 3000;
+
+//hardcode Seattle for now
+const lat = 47.60;
+const lng = -122.32;
 
 // server log
 app.use((req, res, next) => {
@@ -22,7 +25,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
     var weatherTime = new Date().timeNow(); // TODO: Add to weatherResults
-    weather.getWeather(config.lat, config.lng,
+    weather.getWeather(lat, lng,
         (errorMessage, weatherResults) => {
             if (errorMessage) {
                 res.status(400).send(errorMessage);
