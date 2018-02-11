@@ -1,10 +1,11 @@
+require('dotenv').config()
 const express = require("express");
 const fs = require("fs");
 const weather = require("./weather/weather.js");
 const config = require("./config.json");
 
 var app = express();
-var port = 3000;
+const port = process.env.PORT || 3000;
 
 // server log
 app.use((req, res, next) => {

@@ -1,9 +1,12 @@
 const request = require("request");
-const config = require("../config.json");
+
+//hardcode Seattle for now
+const lat = 47.60;
+const lng = -122.32;
 
 var getWeather = (lat, lng, callback) => {
     request({
-            url: `https://api.darksky.net/forecast/${config.FORECAST_API_KEY}/${lat},${lng}`,
+            url: `https://api.darksky.net/forecast/${process.env.FORECAST_API_KEY}/${lat},${lng}`,
             json: true
         },
         (error, response, body) => {
