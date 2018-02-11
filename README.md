@@ -4,7 +4,7 @@ Yeti Weather is yet another weather app.
 
 ## Roadmap
 
-1. Connect to API. Return real-time weather for Seattle directly to screen.
+1. Connect to API. Return real-time weather for Seattle directly to screen. **DONE (Feb 11, 2018)
 
 1. Add Templating library for HTML result.
 
@@ -16,6 +16,6 @@ Yeti Weather is yet another weather app.
 
 ## Resources
 
-[https://darksky.net/dev](Dark Sky API)
+[Dark Sky API](https://darksky.net/dev)
 
-[https://customicondesign.deviantart.com/art/Beautiful-Weather-Icon-Set-208760113](Beautiful Weather Icon Set) by customicondesign
+[Beautiful Weather Icon Set](https://customicondesign.deviantart.com/art/Beautiful-Weather-Icon-Set-208760113) by customicondesign
