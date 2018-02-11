@@ -1,0 +1,25 @@
+{
+  "name": "yeti-weather",
+  "version": "1.0.0",
+  "description": "yet another weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalcolony/yeti-weather.git"
+  },
+  "author": "MAS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digitalcolony/yeti-weather/issues"
+  },
+  "homepage": "https://github.com/digitalcolony/yeti-weather#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
