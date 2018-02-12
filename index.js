@@ -1,27 +1,15 @@
 require('dotenv').config()
 const express = require("express");
-const fs = require("fs");
 const weather = require("./weather/weather.js");
 
 var app = express();
 const port = process.env.PORT || 3000;
 
+app.use(express.static(__dirname + '/'));
+
 //hardcode Seattle for now
 const lat = 47.60;
 const lng = -122.32;
-
-// server log
-app.use((req, res, next) => {
-    var now = new Date().toString();
-    var log = `${now}: ${req.method} : ${req.url}`;
-    console.log(log);
-    fs.appendFile("server.log", log + "\n", err => {
-        if (err) {
-            console.log("Unable to append.");
-        }
-    });
-    next();
-});
 
 app.get("/", (req, res) => {
     var weatherTime = new Date().timeNow(); // TODO: Add to weatherResults
