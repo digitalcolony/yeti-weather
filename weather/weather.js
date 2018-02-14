@@ -29,7 +29,7 @@ function getWeatherIconImage(icon) {
     var weatherIcons = {
         "clear-day": "images/256/Sunny.png",
         "clear-night": "",
-        "rain": "images/256/Rain.png",
+        "rain": "images/256/rain.png",
         "snow": "images/256/snow.png",
         "sleet": "images/256/Showers.png",
         "wind": "",
