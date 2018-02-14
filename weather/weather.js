@@ -1,4 +1,5 @@
 const request = require("request");
+const moment = require("moment-timezone");
 
 var getWeather = (lat, lng, callback) => {
     request({
@@ -8,7 +9,9 @@ var getWeather = (lat, lng, callback) => {
         (error, response, body) => {
             if (!error && response.statusCode === 200) {
                 callback(undefined, {
-                    time: body.currently.time,
+                    time: body.currently.time, // UNIX time in seconds
+                    timezone: body.timezone,
+                    momentTime: moment.tz((body.currently.time * 1000), body.timezone).format("YYYY-MM-DD HH:mm"),
                     summary: body.currently.summary,
                     icon: body.currently.icon,
                     iconImage: getWeatherIconImage(body.currently.icon),
