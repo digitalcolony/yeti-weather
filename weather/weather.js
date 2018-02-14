@@ -27,23 +27,23 @@ var getWeather = (lat, lng, callback) => {
 
 function getWeatherIconImage(icon) {
     var weatherIcons = {
-        "clear-day": "/images/256/Sunny.png",
+        "clear-day": "./images/256/Sunny.png",
         "clear-night": "",
-        "rain": "/images/256/Rain.png",
-        "snow": "/images/256/snow.png",
-        "sleet": "/images/256/Showers.png",
+        "rain": "./images/256/Rain.png",
+        "snow": "./images/256/snow.png",
+        "sleet": "./images/256/Showers.png",
         "wind": "",
-        "fog": "/images/256/Fog.png",
-        "cloudy": "/images/256/Cloudy.png",
-        "partly-cloudy-day": "/images/256/Sunny-Interval.png",
+        "fog": "./images/256/Fog.png",
+        "cloudy": "./images/256/Cloudy.png",
+        "partly-cloudy-day": "./images/256/Sunny-Interval.png",
         "partly-cloudy-night": "",
-        "hail": "/images/256/Hail.png",
-        "thunderstorms": "/images/256/Thunderstorms.png",
+        "hail": "./images/256/Hail.png",
+        "thunderstorms": "./images/256/Thunderstorms.png",
         "tornado": ""
     };
     var weatherIconImage = weatherIcons[icon];
     if (weatherIconImage === "") {
-        weatherIconImage = "/images/256/Sunny.png";
+        weatherIconImage = "./images/256/Sunny.png";
     }
     return weatherIcons[icon];
 }
