@@ -12,7 +12,7 @@ Yeti Weather is yet another weather app.
 
 1. Design better interface with more complete set of weather icons
 
-1. Add Location
+1. Add Location using Google Mapping API.
 
 1. TDB.
 
