@@ -1,18 +1,21 @@
 doctype html
-html
-head
-    title Yeti Weather
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-body
-    h1 Seattle 
-    h2= temperature
-    img(src= iconImage, title= icon, alt= icon)
-
-    p 
-        em at #{forecastTime}
-    p GitHub: 
-        a(href="https://github.com/digitalcolony/yeti-weather") Yeti Weather
-    p Data from:  
-        a(href="https://darksky.net/") Dark Sky
-     
-    
+html(lang="en")
+    head
+        title Yeti Weather
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(href="/css/weather-icons.min.css", rel="stylesheet")
+        link(href="/css/weather-icons-wind.min.css", rel="stylesheet")
+        link(href="/css/bootstrap.min.css", rel="stylesheet")
+    body
+        h1 Seattle 
+        h2= temperature
+        
+        h2(class=iconClass, title=icon)
+        p 
+            em at #{forecastTime}
+        p GitHub: 
+            a(href="https://github.com/digitalcolony/yeti-weather") Yeti Weather
+        p Data from:  
+            a(href="https://darksky.net/") Dark Sky
+        
+        

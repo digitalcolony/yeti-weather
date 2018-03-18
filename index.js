@@ -9,7 +9,9 @@ const port = process.env.PORT || 3000;
 app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
 
-app.use("/images/256", express.static(__dirname + "/images/256"));
+app.use("/css", express.static(__dirname + "/css"));
+app.use("/font", express.static(__dirname + "/font"));
+
 //hardcode Seattle for now
 const lat = 47.6;
 const lng = -122.32;
@@ -19,10 +21,9 @@ app.get("/", (req, res) => {
     if (errorMessage) {
       res.status(400).send(errorMessage);
     } else {
-      console.log("iconImage", weatherResults.iconImage);
       res.render("index", {
         temperature: `${Math.round(weatherResults.temperature)} F`,
-        iconImage: weatherResults.iconImage.toString(),
+        iconClass: weatherResults.iconClass,
         icon: weatherResults.icon,
         forecastTime: weatherResults.momentTime
       });
