@@ -6,16 +6,18 @@ html(lang="en")
         link(href="/css/weather-icons.min.css", rel="stylesheet")
         link(href="/css/weather-icons-wind.min.css", rel="stylesheet")
         link(href="/css/bootstrap.min.css", rel="stylesheet")
+        link(href="/images/favicon.ico?v=sun2" rel="icon" type="image/x-icon")
     body
-        h1 Seattle 
-        h2= temperature
-        
-        h2(class=iconClass, title=icon)
-        p 
-            em at #{forecastTime}
-        p GitHub: 
-            a(href="https://github.com/digitalcolony/yeti-weather") Yeti Weather
-        p Data from:  
-            a(href="https://darksky.net/") Dark Sky
+        div(class="container")
+            h1 Seattle 
+            h2= temperature
+            
+            h2(class=iconClass, title=icon)
+            p 
+                em at #{forecastTime}
+            p 
+                a(href="https://github.com/digitalcolony/yeti-weather") GitHub
+                |  +   
+                a(href="https://darksky.net/") Dark Sky
         
         

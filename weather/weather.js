@@ -16,7 +16,7 @@ var getWeather = (lat, lng, callback) => {
           timezone: body.timezone,
           momentTime: moment
             .tz(body.currently.time * 1000, body.timezone)
-            .format("YYYY-MM-DD HH:mm"),
+            .format("YYYY-MM-DD h:mm A"),
           summary: body.currently.summary,
           icon: body.currently.icon,
           // iconImage: getWeatherIconImage(body.currently.icon),

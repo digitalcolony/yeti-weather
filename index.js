@@ -11,6 +11,7 @@ app.set("view engine", "pug");
 
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/font", express.static(__dirname + "/font"));
+app.use("/images", express.static(__dirname + "/images"));
 
 //hardcode Seattle for now
 const lat = 47.6;
